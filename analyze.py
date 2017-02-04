@@ -6,7 +6,7 @@ connection = sqlite3.connect(":memory:")
 cursor = connection.cursor()
 cursor.execute("CREATE TABLE t (name,age);")
 
-with open('data.csv', 'r') as fin:
+with open('test.csv', 'r') as fin:
   dr = csv.DictReader(fin)
   to_db = [(i['name'], i['age']) for i in dr]
 
